@@ -23,27 +23,24 @@ Registration for IBM Cloud can be done [here](https://console.bluemix.net/regist
 ## Provision IBM Cloud Services  <a name="provision"></a>
 Sign into IBM Cloud to see the welcome page below. New services are provisioned by selecting “Catalog.” Search for and select “Watson Studio.”
 
-<img src="images/Picture01.jpg">
-<br>
-<img src="images/Picture02.jpg">
-
-Two services will be need to use Horovod on IBM Cloud: Watson Studio and IBM Cloud Object Storage. Watson Studio . IBM Cloud Object Storage stores training data and neural network model defintions. Watson Studio's Deep Learning service allows data scientists to train large scale neural network models on GPU-clusters, and deploy and manage them as API endpoints. Make sure that the **Standard V1** (or Enterprise V2) plan is being selected for Watson Studio (this will necessary to for training on multiple GPUs with Horovod). Click “Create,” then search for and add a Lite  “Object Storage” services in the Catalog. Once finished, the IBM Cloud logo in the top left should bring you to a page shown below.
+| ![ibmcloud.jpg](images/ibmcloud.jpg) | 
+|:--:| 
+| *Two services will be need to use Horovod on IBM Cloud: Watson Studio and IBM Cloud Object Storage. Watson Studio . IBM Cloud Object Storage stores training data and neural network model defintions. Watson Studio's Deep Learning service allows data scientists to train large scale neural network models on GPU-clusters, and deploy and manage them as API endpoints. Make sure that the **Standard V1** (or Enterprise V2) plan is being selected for Watson Studio (this will necessary to for training on multiple GPUs with Horovod). Click “Create,” then search for and add a Lite  “Object Storage” services in the Catalog.* |
 
 | ![standardv1.jpg](images/standardv1.jpg) | 
 |:--:| 
 | *Be sure to select the Standard v1 Watson Studio plan* |
 
-<img src="images/Picture03.jpg">
+Once finished, the IBM Cloud logo in the top left should bring you to a page shown below
+<img src="images/services.jpg">
 
 ## Create Watson Studio Project <a name="create"></a>
 
 Now a new Watson Studio Project will be created that utilizes all the IBM Cloud services just provisioned. Access Watson Studio by selecting the created Watson Studio service from the IBM Cloud dashboard, then select “Get Started” click through prompts. Once in Watson Studio select “New project” on the right. The type of project needed is “Complete.”
 
-<img src="images/Picture04.jpg">
+<img src="images/newproject.jpg">
 
-<img src="images/Picture05.jpg">
-
-Name the new project “DLaaS Workshop.” The IBM Cloud Object Storage service that was provisioned is already associated with our project. Select “Create” at the bottom right.
+Name the new project "mnist w Horovod.” The IBM Cloud Object Storage service that was provisioned is already associated with our project. Select “Create” at the bottom right.
 
 <img src="images/Picture06.jpg">
 
